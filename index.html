@@ -1,1 +1,92 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://threejs.org/build/three.js"></script>
+  <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>	
+  <title>Document</title>
+</head>
+<body>
+    <span id ="showxy"></span>
+  <canvas id="myCanvas" onmousemove="coordinates(event)"></canvas>   
+
+</body>
+	<script>
+    const canvas = document.getElementById("myCanvas");
+    const outxy =  document.getElementById("showxy");
+
+    function init(angle)
+    {
+    var renderer = new THREE.WebGLRenderer( {canvas: canvas,antialias: true});
+    var height = window.innerHeight;
+    var width = window.innerWidth;
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,0.1,1000);
+    renderer.setClearColor(new THREE.Color(0));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+//=============================================================
+    var planeGeometry = new THREE.PlaneGeometry(5,5);
+    var planeMaterial = new THREE.MeshBasicMaterial({color:"white"});
+    var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    
+    scene.add(plane);
+//=============================================================
+    //const cubeGeometry = new THREE.BoxGeometry(0.1,0.3,0.001);
+    const cubeGeometry = new THREE.ConeGeometry( 0.1, 0.5, 20 );
+    var cubeMaterial = new THREE.MeshBasicMaterial({color:"red"});
+    cube = new THREE.Mesh(cubeGeometry,
+    new THREE.MeshBasicMaterial({color:"red"}));
+//    cube    scene.add(cube);
+//==============================
+    
+//=============================================================
+    var amount = 100;
+    var amount2 = 10;
+
+
+
+
+    var mesh = new THREE.InstancedMesh(cubeGeometry,cubeMaterial,amount);
+    mesh.instanceMatrix.setUsage( THREE.DynamicDrawUsage);
+    scene.add(mesh);
+    let i =0;
+    const dummy = new THREE.Object3D();
+    for ( let x = 0; x < amount2; x++ ) {
+        for ( let y = 0; y < amount2; y ++ ) {
+            dummy.position.set( 0.5*(x-4.5), 0.5*(y-4.5), 0 );
+            dummy.rotation.z = -angle;
+            dummy.updateMatrix();
+            mesh.setMatrixAt( i++, dummy.matrix );
+        }
+    }
+    mesh.instanceMatrix.needsUpdate = true;
+    camera.position.set(0,0,10);
+    plane.position.set(0,0,0)
+    camera.lookAt(scene.position);
+//==========================================================
+//   document.getElementById("container").appendChild(renderer.domElement);
+    renderer.render(scene,camera);
+    }
+
+
+function coordinates(event) {
+    var x = event.clientX-window.innerWidth/2;
+    var y = -event.clientY+window.innerHeight/2;
+    outxy.innerHTML=["x="+x,"y="+y];
+    if(y>0){
+        init(Math.asin(x/Math.sqrt(x**2+y**2)));
+    }
+    else
+    {
+    init(Math.acos(x/Math.sqrt(x**2+y**2))+Math.PI/2);
+    }
+    
+}
+init(0)
+// -----------------------------------------------------------------
+
+  </script>
+
+</html>
