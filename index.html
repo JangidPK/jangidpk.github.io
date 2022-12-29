@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+    <style>html, body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        display: block;
+      }
+      </style>
+  </head>
+  <body>
+    <main>
+    </main>
+    <script>
+let t;
+let timeT=0;
+
+let theta;
+let thetaOld=0;
+let omega;
+let omegaOld=0;
+// Properties of the pendulum
+let mass = 1;
+let gforce = 10;
+let h = 0.01;
+//=============
+let bx;
+let by;
+let boxSize = 75;
+let overBox = false;
+let locked = false;
+let xOffset = 0.0;
+let yOffset = 0.0;
+let ismousedown =false;
+
+function setup() {
+  createCanvas(window.innerWidth, window.innerHeight);
+  bx = width / 2.0;
+  by = height / 2.0;
+  strokeWeight(5);
+}
+
+function draw() {
+console.log(timeT);
+ background(2, 30, 93);
+ if(ismousedown==false)
+ {
+  [bx,by]=pendulum(bx,by);
+ }// Test if the cursor is over the box
+  if (
+    mouseX > bx - boxSize/2 &&
+    mouseX < bx + boxSize/2 &&
+    mouseY > by - boxSize/2 &&
+    mouseY < by + boxSize/2
+  ) {
+    overBox = true;
+    if (!locked) {
+      stroke(255);
+      fill(244, 122, 158);
+    }
+  } else {
+    stroke(256, 39, 16);
+    fill(244, 122, 158);
+    overBox = false;
+  }
+  
+  // Draw the box
+  circle(width/2,20,30)
+  line(width/2,20,bx,by)
+  circle(bx, by, boxSize);
+}
+function mousePressed() {
+ // noLoop();
+  if (overBox) {
+    locked = true;
+    fill(255, 255, 255);
+  } else {
+    locked = false;
+  }
+  xOffset = mouseX - bx;
+  yOffset = mouseY - by;
+  ismousedown=true;
+  
+}
+function mouseDragged() {
+  if (locked) {
+    bx = mouseX - xOffset;
+    by = mouseY - yOffset;
+  }
+}
+function mouseReleased() {
+  locked = false;
+  ismousedown=false;
+  
+}
+
+
+function pendulum(bx,by){
+
+
+function g(t,theta,omega)
+{
+  return omeganot*sin(theta)
+}
+function f(t,theta,omega)
+{
+  return -omega
+}
+let length=sqrt((bx-width/2)**2+(by-20)**2);
+thetaOld = asin((bx-width/2)/length);
+
+let omeganot = sqrt(length/gforce);
+omega = omegaOld+ h*g(timeT,thetaOld,omegaOld);
+theta = thetaOld+ h*f(timeT,thetaOld,omegaOld);
+omegaOld = omega;
+thetaOld = theta;
+let xx = length*sin(theta);
+let yy = length*cos(theta);
+//console.log(xx+width/2);
+return [xx+width/2,yy+20]
+
+}
+</script>
+  </body>
+</html>
