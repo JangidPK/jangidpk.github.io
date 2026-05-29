@@ -7,19 +7,19 @@
   background-color: var(--global-footer-bg-color);
   color: var(--global-text-color-light);
 
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+  // float: left;
+  // margin-left: 0;
+  // margin-right: 0;
   margin-top: 3em;
-  width: 100%;
+  // width: 100%;
   clear: both;
 
   /* keep footer in normal document flow so custom widgets do not overlap content */
   height: auto;
 
   /* keep the footer on the bottom of the page */
-  position: fixed;
-  bottom: 0;
+  // position: fixed;
+  // bottom: 0;
 
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
@@ -55,6 +55,20 @@
   .fal {
     color: var(--global-text-color-light);
   }
+}
+
+.page__footer {
+  position: relative;
+  width: auto;
+  max-width: 925px;
+  margin: 3rem auto 0 auto;
+  float: none;
+}
+
+.page__footer {
+  background: transparent;
+  border-top: none;
+  box-shadow: none;
 }
 
 .page__footer-copyright {
