@@ -37,7 +37,6 @@ complex systems.
 - Monte Carlo Simulation
 - Statistical Physics
 - Computational Chemical Physics
-- Quantitative Modeling
 - Scientific Computing
 - Machine Learning in Chemistry
 
