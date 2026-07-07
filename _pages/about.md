@@ -1,8 +1,8 @@
 ---
 permalink: /
-title: 
+title:
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
@@ -11,42 +11,54 @@ redirect_from:
 
 # About Me
 
-I am a PhD researcher in Chemical Physics at the Indian Institute of Science Education and Research (IISER) Pune, India. My research focuses on stochastic modeling, non-Markovian dynamics, Monte Carlo simulations, and statistical inference for complex chemical and biological systems.
+I am a Ph.D. researcher in Chemical Physics at the Indian Institute of Science 
+Education and Research (IISER) Pune, India. My research combines statistical mechanics,
+ stochastic processes, and computational modeling to investigate molecular transport,
+  catalytic reactions, protein dynamics, and non-equilibrium phenomena in complex
+   chemical and biological systems.
 
-My work combines theoretical physics and computational modeling methods to study 
-stochastic transport, reaction dynamics, and biomolecular processes in heterogeneous 
-environments. I am particularly interested in developing quantitative frameworks for 
-understanding complex dynamical systems across physics, chemistry, and biology.
+My work focuses on developing analytical and computational models that provide
+ mechanistic insights into dynamics across multiple time and length
+  scales. During my Ph.D., I have published research on dynamic catalysis, 
+  anomalous diffusion, transition-path dynamics, protein conformational dynamics,
+   and biomolecular transport.
 
-My current research includes:
-- Stochastic transport and first-passage dynamics
-- Non-Markovian systems and transition-path theory
-- Dynamic catalysis and nanoscale reaction dynamics
-- Biomolecular search processes in chromatin environments
-- Monte Carlo simulation and probabilistic modeling
+I am currently expanding my research toward **machine learning for chemistry**, 
+with a particular interest in integrating physics-based modeling with modern
+ AI methods for predictive molecular science. My goal is to develop
+  interpretable and physically informed machine learning approaches
+   for chemical discovery and complex dynamical systems.
 
-In addition to academic research, I am also interested in time-series analysis, 
-machine learning and data-driven modeling approaches. I enjoy exploring the intersection of 
-stochastic processes, statistical learning, and computational methods for real-world 
-complex systems.
+## Research Interests
 
-# Research Interests
-
+- Machine Learning for Chemistry
+- Physics-Informed Machine Learning
+- Computational Chemistry
+- Statistical Mechanics
 - Stochastic Processes
-- Non-Markovian Dynamics
-- Monte Carlo Simulation
-- Statistical Physics
-- Computational Chemical Physics
+- Molecular Simulations
+- Catalysis
+- Protein Dynamics
 - Scientific Computing
-- Machine Learning in Chemistry
 
-<!-- # Technical Skills
+## Current Research
 
-**Programming:**  
-Python, C++, MATLAB, Mathematica
+- Dynamic catalysis and reaction kinetics
+- Molecular transport and anomalous diffusion
+- Protein conformational dynamics
+- Non-Markovian stochastic processes
+- Protein DNA interactions
 
-**Scientific Computing:**  
-NumPy, SciPy, pandas, PyTorch, HPC Computing
-
-**Machine Learning & Statistics:**  
-Regression, Classification, PCA, SVM, CNNs, RNNs, VAEs, Time-Series Analysis -->
+<!-- ## Technical Skills -->
+<!--  -->
+<!-- **Programming** -->
+<!--  -->
+<!-- Python, C++, FORTRAN, MATLAB, Mathematica -->
+<!--  -->
+<!-- **Scientific Computing** -->
+<!--  -->
+<!-- NumPy, SciPy, pandas, Matplotlib, PyTorch, High-Performance Computing (HPC) -->
+<!--  -->
+<!-- **Machine Learning** -->
+<!--  -->
+<!-- PyTorch, Regression, Classification, PCA, Support Vector Machines (SVM), Deep Learning Fundamentals (CNNs, RNNs, VAEs) -->
