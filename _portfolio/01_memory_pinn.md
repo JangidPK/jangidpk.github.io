@@ -1,6 +1,8 @@
 ---
 title: "Memory-Aware Physics-Informed Neural Networks for Non-Markovian Diffusion"
-excerpt: "A deep learning project implementing Physics-Informed Neural Networks (PINNs) to solve generalized diffusion equations with temporal memory, where the governing dynamics depend on the entire history of the system rather than its instantaneous state.<br/><img src='/images/memory_pinn.png' style='max-width:700px; width:100%;'>"
+excerpt: "A deep learning project implementing Physics-Informed Neural Networks (PINNs) to solve generalized diffusion equations with temporal memory,
+ where the governing dynamics depend on the entire history of the system rather than its instantaneous state.
+ <br/><img src='/images/memory_pinn.png' style='max-width:600px; width:100%;'>"
 collection: portfolio
 ---
 
@@ -8,14 +10,14 @@ collection: portfolio
 
 This project implements a **Physics-Informed Neural Network (PINN)** that solves a **non-Markovian (memory-dependent) diffusion equation**:
 
-$$ \frac{∂c(x,t)}{∂t} =  \int_0^t K(t - s) · D · ∇²c(x,s) ds$$
+$$ \frac{∂c(x,t)}{∂t} =  \int_0^t K(t - s) · D · ∇^2 c(x,s) ds$$
 
 Unlike ordinary diffusion, where the rate of change at time $t$ depends only on the instantaneous state, this equation says that, the rate of change depends on the **entire history** of the concentration field, weighted by a **memory kernel** $$K(t-s)$$. This is a discrete/numerical analogue of the kind of memory effects seen in non-Markovian stochastic processes and generalized diffusion models.
 
 The network jointly (or optionally separately) learns:
 
-- $c(x,t)$$ — the concentration field, represented by a feed-forward "solution network."
-- $$K(Δt)$$ — the memory kernel, represented by a second, independent feed-forward "kernel network," learned directly from data rather than assumed to have a fixed functional form.
+- $$c(x,t)$$ - the concentration field, represented by a feed-forward "solution network."
+- $$K(Δt)$$ - the memory kernel, represented by a second, independent feed-forward "kernel network," learned directly from data rather than assumed to have a fixed functional form.
 
 Both networks are trained using a composite loss that combines the PDE residual (evaluated via automatic differentiation and numerical quadrature), initial/boundary condition constraints, and a data-fitting term against sparse, optionally noisy observations.
 
@@ -31,8 +33,15 @@ Physics-informed neural networks have been successfully extended to solve a wide
 ## 3. Mathematical Background
 
 ### 3.1 Ordinary diffusion (the warm-up problem)
-Diffusion describes the spreading of particles due to random thermal motion. At sufficiently long time scales, when particle displacements are uncorrelated, the evolution of the probability density follows the classical diffusion equation. This equation provides the reference model against which more complex transport processes with memory effects can be compared. The probability density $$c(x,t)$$ evolves according to 
-$$ \frac{\partial c(x,t)}{\partial t} = D · \frac{\partial^2c(x,t)}{ \partial x²}$$.
+Diffusion describes the spreading of particles due to random thermal motion.
+ At sufficiently long time scales, when particle displacements are uncorrelated,
+  the evolution of the probability density follows the classical diffusion equation. 
+  This equation provides the reference model against which more complex transport
+   processes with memory effects can be compared. The probability density $$c(x,t)$$ 
+   evolves according to
+
+   
+$$ \frac{\partial c(x,t)}{\partial t} = D  \frac{\partial^2c(x,t)}{ \partial x^2} $$.
 
 where $$D$$ is the diffusion coefficient. This equation has initial condition $$c(x,0) = f(x)$$. Further, based on the domain, $$x\in[a,b]$$, of the problem there will be boundary conditions, such as 
 
@@ -56,7 +65,7 @@ where $$\phi_n(x)$$ are eigenfunctions satisfying
 $$\phi_n''+\lambda_n \phi_n=0$$
 together with the specified boundary conditions, $$A_n$$ are determined by the initial condition. 
 
-In the limit of infinite domain, $$\infty < x < \infty$$, and with initial condition as a Dirac delta function.
+In the limit of infinite domain, $$-\infty < x < \infty$$, and with initial condition as a Dirac delta function.
 
 $$c(x,0) = \delta(x - x_0)$$, then the solution is the fundamental solution (or Green's function) of the diffusion equation, written as 
 
@@ -74,7 +83,13 @@ $$
 \frac{\partial c (x,t)}{\partial t} = \int_0^t K(t-s) · D · \nabla^2 c(x,s) ds, 
 $$
 
-where the diffusive flux at time $t$ isn't just a function of the current curvature of the concentration field, it's a weighted sum (memory) of the curvature at *every past time*, with weights given by the kernel $$K(t)$$. If $$K(t) = δ(t)$$ (a Dirac delta), the equation reduces to ordinary diffusion. One commonly used kernel is the exponential kernel, $$K(t) = \frac{1}{\tau}e^{-t/τ}$$, here more recent history matters more than distant history, with a decay timescale $τ$.
+where the diffusive flux at time $$t$$ isn't just a function of the current curvature
+ of the concentration field, it's a weighted sum (memory) of the curvature
+  at *every past time*, with weights given by the kernel
+   $$K(t)$$. If $$K(t) = δ(t)$$ (a Dirac delta), the equation reduces to ordinary 
+   diffusion. One commonly used kernel is the exponential kernel,
+    $$K(t) = \frac{1}{\tau}e^{-t/τ}$$, here more recent history matters more than
+     distant history, with a decay timescale $$τ$$.
 
 This project uses $$K(t) = e^{-t}$$ (note here $$\tau=1$$) as the **known ground-truth kernel** for generating synthetic data, while the kernel network is capable of learning arbitrary shapes.
 
@@ -87,7 +102,10 @@ $$
 I(x,t) = \int_0^{t} K(t-s) L(x,s)ds
 $$
 
-where $$L(x,s) = D \nabla^2c(x,s)$$, represents the spatial diffusion operator. The integral cannot, in general, be evaluated analytically because the concentration field $$c(x,t)$$ is unknown during training. Consequently, the memory term must be approximated numerically. 
+where $$L(x,s) = D \nabla^2c(x,s)$$, represents the spatial diffusion operator.
+ The integral cannot, in general, be evaluated analytically because the concentration
+  field $$c(x,t)$$ is unknown during training. Consequently, the memory term must be
+   approximated numerically. 
 
 
 Assume that the time interval is discretized into $$N+1$$ equally spaced points,
@@ -102,7 +120,8 @@ with
 $$\Delta t=t_{k+1}-t_k.  
 $$
 
-Since every spatial point $$x$$ shares the same temporal discretization, the memory integral at the current time $$t_j$$ is approximated using a quadrature rule, 
+Since every spatial point $$x$$ shares the same temporal discretization, the memory 
+integral at the current time $$t_j$$ is approximated using a quadrature rule, 
 
   
 $$
@@ -121,7 +140,12 @@ w_k =
 \end{cases}
 $$
 
-The approximation replaces the continuous time integral with a finite weighted sum over all previous time levels. At every current time $$t_j$$, the diffusion operator is evaluated not only at the present instant but also at every previous time level. The contribution from each previous state is multiplied by the kernel value $$K(t_j-t_k)$$, which measures the influence of the state at time $t_k$ on the current solution. 
+The approximation replaces the continuous time integral with a finite weighted sum over
+ all previous time levels. At every current time $$t_j$$, the diffusion operator is 
+ evaluated not only at the present instant but also at every previous time level.
+  The contribution from each previous state is multiplied by the kernel value 
+  $$K(t_j-t_k)$$, which measures the influence of the state at time $$t_k$$ on the
+   current solution. 
 
 An important observation is that the kernel depends only on the **time difference**, $$t_j-t_k$$, rather than on the individual values of $$t_j$$ and $$t_k$$. Consequently, the coefficients of interest form the sequence
 

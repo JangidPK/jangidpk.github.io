@@ -6,7 +6,13 @@ excerpt: "A deep learning framework for estimating the Hurst exponent of Fractio
 collection: portfolio
 ---
 
-This project investigates the estimation of the **Hurst exponent (H)** from simulated Fractional Brownian Motion (fBm) trajectories using deep learning. It implements exact fBm simulation algorithms, classical machine learning baselines, and sequence models including Bidirectional LSTMs and Transformers to learn long-range temporal dependencies directly from raw trajectories. The framework provides an end-to-end pipeline for data generation, model training, evaluation, and visualization. :contentReference[oaicite:0]{index=0}
+This project investigates the estimation of the **Hurst exponent (H)** from simulated 
+Fractional Brownian Motion (fBm) trajectories using deep learning. It implements exact
+ fBm simulation algorithms, classical machine learning baselines, and sequence models
+  including Bidirectional LSTMs and Transformers to learn long-range temporal
+   dependencies directly from raw trajectories. The framework provides an 
+   end-to-end pipeline for data generation, model training, evaluation,
+    and visualization.
 
 ## Features
 
@@ -135,7 +141,13 @@ $$ \theta^\ast =\arg\min_\theta \mathcal{L}(\theta).$$
 After training, the estimated Hurst exponent $$\hat H=f_{\theta^\ast}(\mathbf{x})$$, characterizes the anomalous diffusion regime of an unseen trajectory.
 
 
-Unlike traditional Hurst estimation techniques, which rely on handcrafted statistics such as rescaled range analysis, detrended fluctuation analysis, or spectral methods, the objective here is to infer the Hurst exponent directly from raw trajectories by learning the underlying temporal correlation structure. This allows the model to approximate the inverse mapping from observed sample paths to the latent parameter $H$, enabling data-driven estimation of anomalous diffusion across anti-persistent, Brownian, and persistent regimes.
+Unlike traditional Hurst estimation techniques, which rely on handcrafted statistics
+ such as rescaled range analysis, detrended fluctuation analysis, or spectral methods, 
+ the objective here is to infer the Hurst exponent directly from raw trajectories by
+  learning the underlying temporal correlation structure. This allows the model to 
+  approximate the inverse mapping from observed sample paths to the latent parameter
+   $$H$$, enabling data-driven estimation of anomalous diffusion across anti-persistent, 
+   Brownian, and persistent regimes.
 
 
 ## Tools
