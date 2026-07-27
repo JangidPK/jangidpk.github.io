@@ -4,6 +4,12 @@ permalink: /teaching/
 author_profile: true
 ---
 
+Responsibilities:
+
+* Conducted tutorials and discussion sessions.
+* Designed and graded problem sets and assignments.
+* Assessed examinations and assignments.
+* Provided academic support through regular office hours.
 
 ### 2024
 

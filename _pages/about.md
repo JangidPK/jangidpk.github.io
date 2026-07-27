@@ -11,54 +11,40 @@ redirect_from:
 
 # About Me
 
-I am a Ph.D. researcher in Chemical Physics at the Indian Institute of Science 
-Education and Research (IISER) Pune, India. My research combines statistical mechanics,
- stochastic processes, and computational modeling to investigate molecular transport,
-  catalytic reactions, protein dynamics, and non-equilibrium phenomena in complex
-   chemical and biological systems.
+I am a Ph.D. candidate in Chemical Physics at the Indian Institute of Science Education and Research (IISER) Pune, India, where I work with Prof. Srabanti Chaudhury. My research lies at the intersection of **theoretical chemistry, statistical mechanics, stochastic processes, and scientific computing**, with a focus on understanding complex chemical systems through physically interpretable models.
 
-My work focuses on developing analytical and computational models that provide
- mechanistic insights into dynamics across multiple time and length
-  scales. During my Ph.D., I have published research on dynamic catalysis, 
-  anomalous diffusion, transition-path dynamics, protein conformational dynamics,
-   and biomolecular transport.
+During my Ph.D., I have developed analytical and computational models to study **dynamic catalysis, reaction kinetics, molecular transport, non-Markovian dynamics, protein conformational dynamics, and stochastic processes**. My work combines theory, numerical simulations, and statistical mechanics to uncover the microscopic mechanisms governing complex chemical and biological systems.
 
-I am currently expanding my research toward **machine learning for chemistry**, 
-with a particular interest in integrating physics-based modeling with modern
- AI methods for predictive molecular science. My goal is to develop
-  interpretable and physically informed machine learning approaches
-   for chemical discovery and complex dynamical systems.
+As my research has progressed, I have become increasingly interested in bridging **physics-based modeling** with **modern machine learning**. While analytical models provide mechanistic insight, many real chemical systems involve high-dimensional molecular representations and complex reaction spaces where data-driven approaches become essential. My current research direction is therefore to develop **physically grounded machine learning methods** that integrate reaction kinetics, statistical mechanics, and uncertainty-aware learning for predictive chemistry.
+
+My long-term goal is to build computational methods that make chemical discovery more predictive, interpretable, and efficient by combining physical principles with modern AI.
+
+---
 
 ## Research Interests
 
 - Machine Learning for Chemistry
 - Physics-Informed Machine Learning
-- Computational Chemistry
 - Statistical Mechanics
 - Stochastic Processes
-- Molecular Simulations
+- Reaction Kinetics
 - Catalysis
-- Protein Dynamics
+- Computational Chemistry
+- Materials Chemistry
 - Scientific Computing
+
+---
 
 ## Current Research
 
 - Dynamic catalysis and reaction kinetics
-- Molecular transport and anomalous diffusion
-- Protein conformational dynamics
-- Non-Markovian stochastic processes
-- Protein DNA interactions
+- Stochastic modeling of complex chemical systems
+- Protein-DNA interactions
+- Non-Markovian transport and anomalous diffusion
+- Physics-informed neural networks
 
-<!-- ## Technical Skills -->
-<!--  -->
-<!-- **Programming** -->
-<!--  -->
-<!-- Python, C++, FORTRAN, MATLAB, Mathematica -->
-<!--  -->
-<!-- **Scientific Computing** -->
-<!--  -->
-<!-- NumPy, SciPy, pandas, Matplotlib, PyTorch, High-Performance Computing (HPC) -->
-<!--  -->
-<!-- **Machine Learning** -->
-<!--  -->
-<!-- PyTorch, Regression, Classification, PCA, Support Vector Machines (SVM), Deep Learning Fundamentals (CNNs, RNNs, VAEs) -->
+---
+
+## Research Philosophy
+
+I enjoy working at the interface of **theory, computation, and chemistry**. My research philosophy is that **machine learning should complement, rather than replace, mechanistic scientific understanding**. I am particularly interested in developing interpretable AI methods that incorporate physical principles, enabling models that are not only predictive but also provide insight into the underlying chemistry.
