@@ -11,40 +11,40 @@ redirect_from:
 
 # About Me
 
-I am a Ph.D. candidate in Chemical Physics at the Indian Institute of Science Education and Research (IISER) Pune, India, where I work with Prof. Srabanti Chaudhury. My research lies at the intersection of **theoretical chemistry, statistical mechanics, stochastic processes, and scientific computing**, with a focus on understanding complex chemical systems through physically interpretable models.
+I am a Ph.D. candidate in Chemical Physics at the Indian Institute of Science Education and Research (IISER) Pune, India, where I work with Prof. Srabanti Chaudhury. My research lies at the intersection of **statistical mechanics, stochastic processes, and nonequilibrium dynamics**, with a focus on understanding complex chemical and biological systems through physically interpretable, analytically grounded models.
 
-During my Ph.D., I have developed analytical and computational models to study **dynamic catalysis, reaction kinetics, molecular transport, non-Markovian dynamics, protein conformational dynamics, and stochastic processes**. My work combines theory, numerical simulations, and statistical mechanics to uncover the microscopic mechanisms governing complex chemical and biological systems.
+During my Ph.D., I have developed analytical and computational models spanning **stochastic thermodynamics, non-Markovian dynamics, first-passage and transition-path theory, dynamic catalysis and reaction kinetics, molecular transport, and protein conformational and target-search dynamics**. My work combines theory, numerical simulations, and statistical mechanics to uncover the microscopic mechanisms governing far-from-equilibrium chemical and biological processes.
 
-As my research has progressed, I have become increasingly interested in bridging **physics-based modeling** with **modern machine learning**. While analytical models provide mechanistic insight, many real chemical systems involve high-dimensional molecular representations and complex reaction spaces where data-driven approaches become essential. My current research direction is therefore to develop **physically grounded machine learning methods** that integrate reaction kinetics, statistical mechanics, and uncertainty-aware learning for predictive chemistry.
+More recently, I have also grown interested in how machine learning can complement mechanistic modeling — for instance, in learning transport coefficients or memory kernels directly from data — but this is one thread among several in a broader interest in nonequilibrium statistical physics.
 
-My long-term goal is to build computational methods that make chemical discovery more predictive, interpretable, and efficient by combining physical principles with modern AI.
+My long-term goal is to build a research program that uses the tools of stochastic and statistical mechanics to understand how order, transport, and function emerge in chemical and biological systems driven far from equilibrium.
 
 ---
 
 ## Research Interests
 
-- Machine Learning for Chemistry
+- Stochastic Thermodynamics
+- Nonequilibrium Statistical Mechanics
+- Non-Markovian Dynamics & Generalized Langevin Equations
+- First-Passage and Transition-Path Theory
+- Active Matter
+- Reaction Kinetics and Catalysis
+- Biological Physics (protein dynamics, protein–DNA target search)
+- Computational and Scientific Computing
 - Physics-Informed Machine Learning
-- Statistical Mechanics
-- Stochastic Processes
-- Reaction Kinetics
-- Catalysis
-- Computational Chemistry
-- Materials Chemistry
-- Scientific Computing
 
 ---
 
 ## Current Research
 
-- Dynamic catalysis and reaction kinetics
-- Stochastic modeling of complex chemical systems
-- Protein-DNA interactions
+- Harmonically coupled active–passive particle pairs in viscoelastic media (generalized Langevin equation formalism, power-law memory kernels)
+- Stochastic modeling of dynamic catalysis and reaction kinetics
+- Protein–DNA target search and dynamics on rugged free-energy landscapes
 - Non-Markovian transport and anomalous diffusion
-- Physics-informed neural networks
+- Gene regulatory network dynamics (first-passage time analysis)
 
 ---
 
 ## Research Philosophy
 
-I enjoy working at the interface of **theory, computation, and chemistry**. My research philosophy is that **machine learning should complement, rather than replace, mechanistic scientific understanding**. I am particularly interested in developing interpretable AI methods that incorporate physical principles, enabling models that are not only predictive but also provide insight into the underlying chemistry.
+I enjoy working at the interface of **theory, computation, and chemistry**. My research philosophy centers on building models that are analytically grounded and physically interpretable, so that predictive power comes hand-in-hand with mechanistic insight. Where data-driven methods are useful, I see them as tools to extend — not replace — this kind of understanding.
