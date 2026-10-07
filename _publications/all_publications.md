@@ -29,7 +29,7 @@ Google Scholar Profile
 # Journal Publications
 
 1. **Jangid, P.**; Chaudhury, S.
-   *Anomalous Diffusion of Coupled Active–Passive Particles in Viscoelastic Media.*
+   *Two-dimensional anomalous diffusion of coupled active-passive particles in viscoelastic media.*
     *Physical Review E* **2026**.
    **DOI:** [10.1103/vhs8-5gc7]( https://doi.org/10.1103/vhs8-5gc7) <a href="/files/Jangid2026PRE_ActiveMatter.pdf" target="_blank" class="btn btn--primary">PDF
    
