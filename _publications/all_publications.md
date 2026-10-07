@@ -9,10 +9,9 @@ author_profile: true
 
 ## Research Highlights
 
-- **10** Peer-reviewed journal publications
-- **9** First-author publications
-- **1** Manuscripts under review
-- Publications in *ACS Catalysis*, *Materials Horizons*, *Journal of Physical Chemistry (A/B/C)*, *Journal of Chemical Physics*, *Physical Chemistry Chemical Physics*, and *Journal of Statistical Mechanics*.
+- **11** Peer-reviewed journal publications
+<!-- - **10** First-author publications -->
+<!-- - Publications in *ACS Catalysis*, *Physical Review*, *Materials Horizons*, *Journal of Physical Chemistry (A/B/C)*, *Journal of Chemical Physics*, *Physical Chemistry Chemical Physics*, and *Journal of Statistical Mechanics*. -->
 
 For a complete and up-to-date publication list, please visit my Google Scholar profile.
 
@@ -21,20 +20,24 @@ Google Scholar Profile
 </a>
 
 ---
-
-# Manuscripts Under Review
-
-1. **Jangid, P.**; Chaudhury, S.
-   *Anomalous Diffusion of Coupled Active–Passive Particles in Viscoelastic Media.*
-   **Under review** (2026).
-   
----
+<!--  -->
+<!-- # Manuscripts Under Review -->
+<!--  -->
+<!--  -->
+<!-- --- -->
 
 # Journal Publications
 
+1. **Jangid, P.**; Chaudhury, S.
+   *Anomalous Diffusion of Coupled Active–Passive Particles in Viscoelastic Media.*
+    *Physical Review E* **2026**.
+   **DOI:** [10.1103/vhs8-5gc7]( https://doi.org/10.1103/vhs8-5gc7) <a href="/files/Jangid2026PRE_ActiveMatter.pdf" target="_blank" class="btn btn--primary">PDF
+   
+
 1. **Jangid, P.**; Chaudhury, S.; Kolomeisky, A. B.
    *Dynamic Fluctuations Can Counteract Catalytic Inhibition and Enhance Catalytic Performance.*
-   **Under review** (2026).
+   *ACS Catalysis* **2026**, **16** (16), 16403–16415.
+    **DOI:** [10.1021/acscatal.6c05102](https://doi.org/10.1021/acscatal.6c05102)
 
 1. **Jangid, P.**; Chaudhury, S.
    DNA Target Search in Chromatin Compartments under Stochastic Resetting.
