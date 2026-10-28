@@ -11,11 +11,22 @@ redirect_from:
 
 # About Me
 
-I am a Ph.D. candidate in Chemical Physics at the Indian Institute of Science Education and Research (IISER) Pune, India. My research focuses on **stochastic processes, statistical inference, computational modeling, and machine learning**, with applications to complex chemical and biological systems.
+I am a Ph.D. candidate in Chemical Physics at the Indian Institute of Science Education and Research (IISER) Pune, India. My research lies at the intersection of **stochastic processes, statistical mechanics, and machine learning**, with a focus on physically interpretable, analytically grounded models of complex systems.
 
-I develop analytical and computational models of stochastic systems, combining probability theory, statistical methods, numerical simulation, and data-driven approaches. My work involves **large-scale Monte Carlo simulations, parameter estimation, model validation, and machine learning using Python and C++**.
+I develop analytical and computational models of stochastic and non-Markovian dynamics, combining probability theory, large-scale simulation, statistical inference, and data-driven methods. My work includes first-passage and transition-path theory, anomalous diffusion, reaction kinetics, and physics-informed neural networks that learn hidden dynamics directly from noisy data.
 
-I am also interested in applying these quantitative methods to **systematic financial research**, particularly time-series modeling, factor analysis, and data-driven signal discovery.
+The same toolkit applies to **time-series modeling, factor analysis, and systematic signal research** in quantitative finance, where I use data-driven methods to extend, not replace, mechanistic understanding.
+
+---
+
+## Research Interests
+
+- Stochastic Processes & Nonequilibrium Statistical Mechanics
+- Non-Markovian Dynamics & Anomalous Diffusion
+- First-Passage and Rare-Event Theory
+- Statistical Inference & Time-Series Analysis
+- Physics-Informed & Data-Driven Machine Learning
+- Quantitative Modeling & Systematic Research
 
 ---
 
@@ -23,10 +34,8 @@ I am also interested in applying these quantitative methods to **systematic fina
 
 **Programming:** Python (NumPy, SciPy, pandas, PyTorch), C++, MATLAB, Mathematica
 
-**Statistics & Machine Learning:** Statistical inference, regression, classification, PCA, SVM, time-series analysis, neural networks, LSTM, Transformers, VAEs
+**Modeling & Statistics:** Stochastic processes, Monte Carlo simulation, statistical inference, time-series analysis, probabilistic modeling, dynamical systems
 
-**Quantitative Modeling:** Stochastic processes, Monte Carlo simulation, probabilistic modeling, non-Markovian dynamics, statistical mechanics, dynamical systems
+**Machine Learning:** Neural networks, LSTM, Transformers, VAEs, PINNs, PCA, SVM
 
-**Quantitative Finance:** Financial time-series analysis, return modeling, factor extraction, residual analysis, clustering, signal generation, backtesting
-
-**Computational Methods:** Numerical optimization, scientific computing, large-scale simulation, high-performance computing
+**Computation:** Numerical optimization, scientific computing, high-performance computing (MPI)
